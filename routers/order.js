@@ -96,7 +96,7 @@ router.delete('/cancelorder/:id', verifyUser, async (req, res) => {
 router.get('/myallorders', verifyUser, async (req, res) => {
     try {
         const findUser = await User.findOne({ _id: req.user })
-        const findAllOrders = await Order.find({ Email: findUser.email }).sort({ "OrderedAt": -1 })
+        const findAllOrders = await Order.find({ Email: findUser.email }).sort({ "OrderedAt": 1 })
 
         if (!findUser) {
             return res.status(400).json({ success: false, message: "No such user" });
