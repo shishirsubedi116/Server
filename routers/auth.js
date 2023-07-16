@@ -266,7 +266,7 @@ router.patch('/newpass', verifyUser, async (req, res) => {
 
 
 //Change password
-router.patch('/changepass', verifyUser, async (req, res) => {
+router.patch('/changepass', async (req, res) => {
     const { email, password, newPassword } = req.body;
     if (!email || !password || !newPassword) {
         return res.status(400).json({ success: false, message: "password cannot be empty" })
