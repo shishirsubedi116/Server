@@ -19,7 +19,6 @@ const forgotSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    expireAt: { type: Date, default: Date.now() + 60000, expires: 60 }
 })
 
 

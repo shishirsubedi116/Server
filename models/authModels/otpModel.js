@@ -27,8 +27,7 @@ const UserOtp = new mongoose.Schema({
     password: {
         type: String,
         required: true
-    },
-    expireAt: { type: Date, default: Date.now()+60000, expires: 60 }
+    }
 })
 
 
