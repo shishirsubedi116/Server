@@ -45,7 +45,7 @@ router.post('/signup', async (req, res) => {
                 from: 'threatyour@gmail.com',
                 to: `${email}`,
                 subject: 'Your OTP',
-                text: `${OTP} is Your Otp for Signup in Diamond Dental
+                text: `${OTP} is Your Otp for Signup in DiamondEats
 
                 If any error occured, please try again. Please verify under 1 minute
                 `
@@ -179,7 +179,7 @@ router.post('/forgot', async (req, res) => {
             from: 'threatyour@gmail.com',
             to: `${email}`,
             subject: 'Your OTP',
-            text: `${OTP} is Your Otp for recovering your account in Diamond Dental
+            text: `${OTP} is Your Otp for recovering your account in DiamondEats
         
                         If any error occured, please try again. Please verify under 1 minute
                         `
