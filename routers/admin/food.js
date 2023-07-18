@@ -31,6 +31,7 @@ router.post('/addfood', verifyUser, upload.single('Picture'), async (req, res) =
     const { Name, foodId, Category, Unit, Price } = req.body
 
     // Checking if something is missing in the body
+    
     if (!Name || !foodId || !Category || !Price || !Unit || !Picture) {
         return res.status(400).json({ success: false, message: "Please Fill the data properly" });
     }
